@@ -1,0 +1,460 @@
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var, u, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: inherit; 
+}
+
+
+
+b {
+  color: #3e3b3f;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Oswald", sans-serif;
+    font-size: 20px;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+img {
+  display: block;
+}
+
+
+button, input, optgroup, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+button, input {
+  overflow: visible;
+}
+
+button, select {
+  text-transform: none;
+}
+
+button, [type="button"], [type="reset"], [type="submit"] {
+  -webkit-appearance: button;
+}
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+a:focus {
+  outline: none;
+}
+
+:root {
+  --clr-main: #09aff4;
+  --clr-main-rgb: 9, 175, 244;
+  --clr-white: #ffffff;
+  --clr-dark-blue-rgb: 6, 9, 34;
+}
+
+/* Navigation */
+
+.navbar {
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+  transition: background-color 0.3s ease;
+}
+
+.navbar.scrolled {
+  background-color: #91cc0e;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.navbar-logo {
+  position: absolute;
+  left: 20px;
+}
+
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.navbar-menu li {
+  list-style: none;
+}
+
+.navbar-menu li a {
+  color: #567a47;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  position: relative;
+  display: inline-flex; /* Позволяет выровнять текст и точку вместе */
+  align-items: center; /* Выравнивание по центру */
+  transition: color 0.3s ease;
+}
+
+
+.navbar-menu li a:hover::before,
+.navbar-menu li a.active::before {
+  opacity: 1;
+}
+
+.navbar-menu li a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: #b6ce6d;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+.navbar-menu li a:hover::after,
+.navbar-menu li a.active::after {
+  width: 100%;
+  left: 0;
+}
+
+.navbar-menu li a:hover,
+.navbar-menu li a.active {
+  color: #b6ce6d;
+}
+
+/* Main */
+
+.main-content {
+  height: 100vh;
+  background-image: url('./img/BG.jpg');
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.award-title {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+
+.award-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.award-image img{
+  width: 900px;
+  height: auto;
+}
+
+.award-title h1 {
+  font-size: 80px;
+  letter-spacing: -5px;
+  color: #d93d04;
+}
+
+.award-title p {
+  font-weight: 700;
+  font-size: 14px;
+  color: #91cc0e;
+  text-transform: uppercase;
+  letter-spacing: .2em
+}
+
+.enter-button {
+  background-color: #91cc0e; /* Цвет фона кнопки */
+  color: white;
+  width: 100%;
+  padding: 13px 31px; /* Увеличены отступы */
+  font-size: 14px; /* Увеличен размер текста */
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+  font-family: "Roboto", sans-serif;
+  display: inline-flex; /* Flex-контейнер для выравнивания иконки и текста */
+  align-items: center;
+  justify-content: center;
+  font-weight: 600; 
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Плавный переход */
+}
+
+.enter-button:hover {
+  background-color: #6fa306; /* Цвет при наведении */
+  transform: translateY(-2px); /* Легкий подъем кнопки при наведении */
+}
+
+.enter-button:active {
+  transform: translateY(1px); /* Нажатие кнопки */
+}
+
+.enter-button::before {
+  content: '\f007'; /* Иконка Font Awesome для пользователя */
+  font-family: 'Font Awesome 5 Free'; /* Подключение Font Awesome */
+  font-weight: 600;
+  margin-right: 10px; /* Отступ между иконкой и текстом */
+}
+
+.award-description {
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  color: #2c4326; 
+}
+
+.award-description h2 {
+  font-size: 50px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  line-height: 1.4em;
+}
+
+.award-description .small-text {
+  font-size: 18px;
+  color: #777777;
+  font-weight: 400;
+  line-height: 1.75;
+}
+
+.border-b {
+  width: 100%;
+  border-bottom: 1px solid #eaeaea;
+  margin: 40px 0px;
+}
+
+.award-description .competition-status {
+  font-size: 18px;
+  font-weight: bold;
+  color: green;
+  text-transform: uppercase;
+}
+
+.sponsor-logos {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 50px 0px;
+  padding: 0 20px;
+}
+
+.sponsor-logos img {
+  max-width: 150px; 
+  max-height: 100px;
+  object-fit: contain; 
+  filter: grayscale(100%); 
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.sponsor-logos img:hover {
+  filter: grayscale(0%); 
+  transform: scale(1.05); 
+}
+
+.cta-section {
+  background-size: cover;
+  background-position: center 25%;
+  color: white;
+  padding: 108px 20px;
+  text-align: center;
+}
+
+.cta-section h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.cta-button {
+  border: 2px solid #91cc0e;
+  background: transparent;
+  font-family: "Roboto", sans-serif;
+  color: #91cc0e;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #91cc0e;
+  color: white;
+}
+
+.about-statuette-section {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff3cd;
+  padding: 70px 40px;
+}
+
+.fa-stack {
+  font-size: 2.3em;
+  position: relative;
+    display: inline-block;
+    width: 2.5em;
+    height: 2.5em;
+    line-height: 2.5em;
+    vertical-align: middle;
+    border: 2px solid #c0c0c0;
+    color: #ffffff;
+    background-color: #ef4523;
+    border-color: #ef4523;
+    border-radius: 10em;
+    border-width: 1px;
+    text-align: center;
+}
+
+.about-section, .statuette-section {
+  padding: 54px 36px 54px 36px;
+  width: 45%;
+}
+
+.statuette-image {
+  width: 500px;
+
+  height: 766px;
+  display: flex;
+  justify-content: center;
+}
+
+.statuette-image img {
+
+}
+
+
+.about-section h3, .statuette-section h3 {
+  font-size: 35px;
+  color: #2c4326;
+  line-height: 1.5em;
+  font-weight: 600;
+  margin: 30px 0px;
+}
+
+.about-section p, .statuette-section p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .about-statuette-section {
+      flex-direction: column;
+      padding: 20px;
+  }
+
+  .about-section, .statuette-section {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 30px;
+  }
+
+  .statuette-image {
+      margin: 20px 0;
+  }
+}
