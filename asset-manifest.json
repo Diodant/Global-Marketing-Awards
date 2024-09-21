@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/Global-Marketing-Awards/static/css/main.36ab65ae.css",
+    "main.js": "/Global-Marketing-Awards/static/js/main.9f39f022.js",
+    "static/js/453.ae3339de.chunk.js": "/Global-Marketing-Awards/static/js/453.ae3339de.chunk.js",
+    "static/media/statuettes.png": "/Global-Marketing-Awards/static/media/statuettes.56cadeedd03f939a5f30.png",
+    "static/media/BG.jpg": "/Global-Marketing-Awards/static/media/BG.88626d4e208892d46b22.jpg",
+    "static/media/BG_01-web.jpg": "/Global-Marketing-Awards/static/media/BG_01-web.8b53b27159277f7694bf.jpg",
+    "static/media/logo.png": "/Global-Marketing-Awards/static/media/logo.409e6b740f8afeb5d881.png",
+    "static/media/sponsor5.webp": "/Global-Marketing-Awards/static/media/sponsor5.a51445a03a20485e171e.webp",
+    "static/media/sponsor2.webp": "/Global-Marketing-Awards/static/media/sponsor2.b15f4c8118a646953bad.webp",
+    "static/media/sponsor6.webp": "/Global-Marketing-Awards/static/media/sponsor6.0c9cae0cea1395822fde.webp",
+    "static/media/sponsor3.webp": "/Global-Marketing-Awards/static/media/sponsor3.34aae05e5339cfe68fdb.webp",
+    "static/media/sponsor1.webp": "/Global-Marketing-Awards/static/media/sponsor1.477f8ef8c3279dee37e1.webp",
+    "static/media/sponsor4.webp": "/Global-Marketing-Awards/static/media/sponsor4.3a104ae7ee89c94c8c8d.webp",
+    "index.html": "/Global-Marketing-Awards/index.html",
+    "main.36ab65ae.css.map": "/Global-Marketing-Awards/static/css/main.36ab65ae.css.map",
+    "main.9f39f022.js.map": "/Global-Marketing-Awards/static/js/main.9f39f022.js.map",
+    "453.ae3339de.chunk.js.map": "/Global-Marketing-Awards/static/js/453.ae3339de.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.36ab65ae.css",
+    "static/js/main.9f39f022.js"
+  ]
+}
