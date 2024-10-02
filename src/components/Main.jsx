@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import sponsor1 from '../img/sponsors/sponsor1.webp'; 
 import sponsor2 from '../img/sponsors/sponsor2.webp';
 import sponsor3 from '../img/sponsors/sponsor3.webp';
@@ -8,8 +8,31 @@ import sponsor6 from '../img/sponsors/sponsor6.webp';
 import backgroundImg from '../img/BG_01-web.jpg'; 
 import awardImage from '../img/statuettes.png';
 import logoImage from '../img/logo.png';
+import EntryInformation from './EntryInformation'
+
+const testimonials = [
+    {
+      text: "The prestige of earning a MarCom award is the final culmination of a tremendous amount of effort for our clients and us. It validates the quality of our work and provides our clients with icing on the cake of a project well executed.",
+      author: "TONY ROTUNDO PACIFIC TECHNOLOGY SOLUTIONS, IRVINE, CA"
+    },
+    {
+      text: "Winning a Global Marketing Award helped our agency gain the visibility and trust we needed in the industry.",
+      author: "JANE DOE MARKETING DIRECTOR, LONDON, UK"
+    },
+    {
+      text: "This recognition pushed our creativity further, leading to an even more significant impact on our clients' businesses.",
+      author: "JOHN SMITH CREATIVE DIRECTOR, NY, USA"
+    }
+  ];
 
 const Main = () => {
+
+    const [activeTestimonial, setActiveTestimonial] = useState(0);
+
+    const handleDotClick = (index) => {
+      setActiveTestimonial(index);
+    };
+
     return (
         <>
             <div className="main-content">
@@ -58,10 +81,7 @@ const Main = () => {
                     </div>
                     <h3>ABOUT GLOBAL MARKETING AWARDS</h3>
                     <p>
-                        The Global Marketing Awards recognize excellence in marketing and communication while celebrating creativity, hard work, and achievement by industry professionals.
-                    </p>
-                    <p>
-                        Since its inception in 2019, the Global Marketing Awards have grown into one of the largest and most prestigious competitions in the world, with over 5,000 entries annually. It is administered by the Global Association of Marketing Professionals (GAMP).
+                    С момента своего основания, Global Marketing Awards стала платформой для обмена опытом и идеями среди ведущих маркетологов СНГ. Ежегодно премия привлекает внимание тысяч специалистов и лидеров отрасли, предоставляя им возможность заявить о себе на международной арене. Премия подчеркивает значимость маркетинга в развитии бизнеса и укреплении брендов, демонстрируя лучшие практики и новаторские подходы.
                     </p>
                 </div>
                 <div className="statuette-image">
@@ -75,13 +95,57 @@ const Main = () => {
                     </div>
                     <h3>THE STATUETTE</h3>
                     <p>
-                        The Global Marketing Award statuette is an iconic symbol of achievement in marketing and communication. Crafted with precision, it graces the shelves of top professionals and organizations globally.
-                    </p>
-                    <p>
-                        This iconic statuette is created by the prestigious Global Awards Design, which also designs trophies for numerous other international competitions.
+                    Трофей премии Global Marketing Awards представляет собой символ превосходства в сфере маркетинга и креативности. Выполненный из высококачественного прозрачного акрила с контрастной красной основой, трофей визуально напоминает восхождение на вершину успеха. Верхняя часть украшена музыкальными нотами, символизирующими гармонию и ритм маркетинговой кампании, а центральная надпись включает название премии и имя лауреата. Этот трофей служит признанием за значительный вклад в индустрию маркетинга, олицетворяя труд, инновации и креативные достижения победителей.
                     </p>
                 </div>
                 </div>
+
+                <div className="why-global-marketing-section">
+                <div className="why-section-content">
+                    <div className="why-text">
+                        <div className="fa-container">
+                            <span className="fa fa-stack fa-3x btn-color-153641 fa-rounded btn-disable-hover">
+                                <i className="fa fa-thumbs-up"></i>
+                            </span>
+                        </div>
+                        <h3>WHY GLOBAL MARKETING AWARDS?</h3>
+                        <p>
+                            Global Marketing Awards is the choice of top marketing professionals globally. Thousands of creative firms and agencies participate to receive international recognition.
+                        </p>
+                        <p>
+                            Entry fees are affordable, and the judging process is fair and conducted by a team of full-time professionals. Results are timely, and every entrant gets their chance to shine.
+                        </p>
+                        <p>
+                            Our awards also feature the most comprehensive winner listing in the industry, with dedicated profile pages for each entry that is searchable by location and category.
+                        </p>
+                        <button className="see-winners-button">SEE WINNERS GALLERY</button>
+                    </div>
+                </div>
+                <div className="why-left-image">
+                </div>
+                <div className="why-right-image">
+                </div>
+                
+            </div>
+            <EntryInformation />
+                  {/* Testimonial Section */}
+      <div className="testimonial-section">
+        <div className="testimonial-content">
+          <p className="testimonial-text">“ {testimonials[activeTestimonial].text} ”</p>
+          <p className="testimonial-author">— {testimonials[activeTestimonial].author}</p>
+        </div>
+
+        {/* Dots for navigating through testimonials */}
+        <div className="testimonial-dots">
+          {testimonials.map((_, index) => (
+            <span
+              key={index}
+              className={`dot ${activeTestimonial === index ? 'active' : ''}`}
+              onClick={() => handleDotClick(index)}
+            ></span>
+          ))}
+        </div>
+      </div>
         </>
     );
 };

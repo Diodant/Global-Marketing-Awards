@@ -30,8 +30,8 @@ const Navigation = () => {
         <ul className="navbar-menu">
           <li><NavLink exact to="/" activeClassName="active">Главная</NavLink></li>
           <li><NavLink to="/about" activeClassName="active">О нас</NavLink></li>
-          <li><NavLink to="/position" activeClassName="active">Положения</NavLink></li>
-          <li><NavLink to="/criteria" activeClassName="active">Критерии оценки</NavLink></li>
+          {/* <li><NavLink to="/position" activeClassName="active">Положения</NavLink></li>
+          <li><NavLink to="/criteria" activeClassName="active">Критерии оценки</NavLink></li> */}
           <li><NavLink to="/winners" activeClassName="active">Победители</NavLink></li>
           <li><NavLink to="/judges" activeClassName="active">Судьи</NavLink></li>
           <li><NavLink to="/articles" activeClassName="active">Статьи</NavLink></li>

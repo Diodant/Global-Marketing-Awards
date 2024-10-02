@@ -113,13 +113,6 @@ a:focus {
   outline: none;
 }
 
-:root {
-  --clr-main: #09aff4;
-  --clr-main-rgb: 9, 175, 244;
-  --clr-white: #ffffff;
-  --clr-dark-blue-rgb: 6, 9, 34;
-}
-
 /* Navigation */
 
 .navbar {
@@ -171,8 +164,8 @@ a:focus {
   font-weight: 600;
   letter-spacing: 0.05em;
   position: relative;
-  display: inline-flex; /* Позволяет выровнять текст и точку вместе */
-  align-items: center; /* Выравнивание по центру */
+  display: inline-flex; 
+  align-items: center; 
   transition: color 0.3s ease;
 }
 
@@ -189,7 +182,7 @@ a:focus {
   left: 50%;
   width: 0;
   height: 2px;
-  background-color: #b6ce6d;
+  background-color: #2c4326;
   transition: width 0.3s ease, left 0.3s ease;
 }
 
@@ -201,7 +194,7 @@ a:focus {
 
 .navbar-menu li a:hover,
 .navbar-menu li a.active {
-  color: #b6ce6d;
+  color: #2c4326;
 }
 
 /* Main */
@@ -239,10 +232,22 @@ a:focus {
   height: auto;
 }
 
+@media (max-width: 1100px) {
+  .award-image img{
+    width: 500px;
+  }
+}
+
 .award-title h1 {
   font-size: 80px;
   letter-spacing: -5px;
   color: #d93d04;
+}
+
+@media (max-width: 1100px) {
+  .award-title h1{
+    font-size: 65px;
+  }
 }
 
 .award-title p {
@@ -254,16 +259,16 @@ a:focus {
 }
 
 .enter-button {
-  background-color: #91cc0e; /* Цвет фона кнопки */
+  background-color: #91cc0e; 
   color: white;
   width: 100%;
-  padding: 13px 31px; /* Увеличены отступы */
-  font-size: 14px; /* Увеличен размер текста */
+  padding: 13px 31px; 
+  font-size: 14px; 
   border: none;
   cursor: pointer;
   margin-top: 20px;
   font-family: "Roboto", sans-serif;
-  display: inline-flex; /* Flex-контейнер для выравнивания иконки и текста */
+  display: inline-flex; 
   align-items: center;
   justify-content: center;
   font-weight: 600; 
@@ -278,14 +283,14 @@ a:focus {
 }
 
 .enter-button:active {
-  transform: translateY(1px); /* Нажатие кнопки */
+  transform: translateY(1px); 
 }
 
 .enter-button::before {
-  content: '\f007'; /* Иконка Font Awesome для пользователя */
-  font-family: 'Font Awesome 5 Free'; /* Подключение Font Awesome */
+  content: '\f007'; 
+  font-family: 'Font Awesome 5 Free'; 
   font-weight: 600;
-  margin-right: 10px; /* Отступ между иконкой и текстом */
+  margin-right: 10px; 
 }
 
 .award-description {
@@ -437,9 +442,10 @@ a:focus {
 }
 
 .about-section p, .statuette-section p {
-  font-size: 1.1rem;
-  color: #555;
-  line-height: 1.6;
+  font-size: 18px;
+  color: #777777;
+  font-weight: 300;
+  line-height: 1.75;
 }
 
 @media (max-width: 768px) {
@@ -457,4 +463,461 @@ a:focus {
   .statuette-image {
       margin: 20px 0;
   }
+}
+
+.why-global-marketing-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #e9f0e4;
+  padding: 40px 76px;
+  position: relative;
+  overflow: hidden;
+}
+
+.why-section-content {
+  width: 50%;
+  z-index: 2; 
+  color: #333;
+  position: relative;
+}
+
+.why-left-image,
+.why-right-image {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+}
+
+.why-left-image {
+  left: 0;
+  width: 60%;
+  background-image: url('./img/left-image.jpg'); 
+}
+
+.why-right-image {
+  right: 0;
+  width: 40%;
+  background-image: url('./img/right-image.jpg'); 
+}
+
+.why-left-image::before,
+.why-right-image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #91cc0e;
+  opacity: 0.5; 
+  z-index: 2; 
+}
+
+.why-text h3 {
+  font-size: 35px;
+  color: #2c4326;
+  line-height: 1.5em;
+  font-weight: 600;
+  margin: 30px 0px;
+}
+
+.why-text p {
+  color: #204f04;
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.see-winners-button {
+  display: inline-block;
+  padding: 13px 31px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  border-radius: 2px;
+  border: 1px solid #2c4326;
+  color: #2c4326 ;
+  background-color: transparent;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 15px;
+}
+
+.see-winners-button:hover {
+  background-color: #2c4326;
+  color: #fff ;
+}
+
+/* Entry */
+.entry-info-container {
+  padding: 60px 0px;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.entry-header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.entry-logo {
+  margin-bottom: 20px;
+}
+
+.entry-logo img {
+  width: 150px;
+}
+
+.entry-title {
+  font-size: 75px;
+  color: #2c4326;
+  line-height: 1.5em;
+  letter-spacing: 0.00em;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.entry-subtitle {
+  font-size: 18px;
+  color: #777777;
+  font-weight: 400;
+}
+
+.entry-content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch; 
+  margin: 0px 20px;
+}
+
+.category-menu {
+  max-width: 220px;
+  margin-right: 40px;
+  align-self: stretch; 
+}
+
+.category-menu ul {
+  border-right: 1px solid #eaeaea;
+  list-style-type: none;
+  padding: 0;
+  height: 100%;
+}
+
+.category-menu li {
+  padding: 9px 18px 9px 0px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #2c4326;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+/* Arrow image styling */
+.arrow-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  transition: transform 0.4s ease;
+}
+
+.arrow-icon.open {
+  transform: rotate(90deg); 
+}
+
+.toggle-section {
+  display: flex;
+  align-items: center;
+  font-size: 22px;
+  font-weight: bold;
+  color: #2c4326;
+  margin: 10px 0px;
+  cursor: pointer;
+  transition: color 0.4s ease;
+}
+
+/* Collapsible Content */
+.collapsible-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.collapsible-content.open {
+  max-height: 100%;
+  padding: 10px 0; 
+}
+.toggle-section:hover {
+  color: #91cc0e;
+}
+
+.category-menu li:hover,
+.category-menu li.active {
+  color: #91cc0e;
+  border-right: 1px solid #91cc0e;
+}
+
+.content-area {
+  flex-grow: 1;
+  align-self: stretch; 
+}
+
+.content-area h2 {
+  font-size: 28px;
+  color: #2c4326;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.content-area ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.content-area p,
+.content-area li {
+  padding: 5px 0px;
+  font-size: 18px;
+  line-height: 1.75;
+  color: #555;
+}
+
+/* Testimonial Section */
+.testimonial-section {
+  background-color: #91cc0e;
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+  position: relative;
+}
+
+.testimonial-text {
+  font-size: 29px;
+  font-style: italic;
+  max-width: 800px;
+  margin: 0 auto 20px;
+  line-height: 1.5;
+}
+
+.testimonial-author {
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.testimonial-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dot.active {
+  background-color: white;
+  transform: scale(1.1); 
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.8); 
+}
+
+.dot:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: scale(1.1); 
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.5); 
+}
+
+
+
+.winners-page-container {
+  background: #f3f3f3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.map-container {
+  width: 100%;
+  height: 500px;
+}
+
+.winners-section {
+  padding: 20px;
+  max-width: 1200px;
+}
+
+.year-buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.year-buttons button {
+  padding: 12px 24px;
+  background-color: #91cc0e;
+  color: white;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+.year-buttons button:hover {
+  background-color: #76a80b;
+  transform: translateY(-3px); 
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); 
+}
+
+.year-buttons button:active {
+  transform: translateY(2px); 
+  background-color: #628e09;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+.year-buttons button:focus {
+  outline: none; 
+  box-shadow: 0 0 0 3px rgba(145, 204, 14, 0.5); 
+}
+
+.winners-list {
+  background-color: #fff;
+  padding: 45px 30px;
+  width: 900px;
+}
+
+.winner-item {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #9fce0d;
+  padding-bottom: 10px;
+}
+
+.winners-title {
+  font-size: 35px;
+  color: #2c4326;
+  line-height: 1.5em;
+  letter-spacing: 0.00em;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.winner-item h3 {
+  margin: 0;
+  color: #9fce0d;
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: .055em;
+  margin-bottom: 5px;
+  webkit-filter: brightness(85%);
+  filter: brightness(85%);
+}
+
+.winners-country {
+  font-size: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+.winners-category {
+  font-size: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+.winner-item p {
+  font-size: 20px;
+  font-weight: 400;
+    color: #606060;
+}
+
+.footer {
+  background: -webkit-linear-gradient(left, rgb(3, 94, 22) 5%, rgb(152, 208, 16) 100%);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  font-size: 14px;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: #91cc0e;
+  font-size: 15px;
+  line-height: 1.75;
+  font-weight: 400;
+}
+
+.footer-some {
+  display: flex;
+  gap: 10px;
+}
+.footer-links a {
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #fff;
+}
+
+.footer-social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.footer-social-icons a {
+  color: white;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.footer-social-icons a:hover {
+  color: #ccc;
+}
+
+.footer-back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: rgb(3, 94, 22);
+  color: white;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.footer-back-to-top:hover {
+  background-color: rgb(152, 208, 16);
 }
