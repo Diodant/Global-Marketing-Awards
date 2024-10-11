@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Global-Marketing-Awards/static/css/main.27546563.css",
-    "main.js": "/Global-Marketing-Awards/static/js/main.15ab3967.js",
+    "main.css": "/Global-Marketing-Awards/static/css/main.fb52bf09.css",
+    "main.js": "/Global-Marketing-Awards/static/js/main.c9cbafb8.js",
     "static/js/453.23263ec9.chunk.js": "/Global-Marketing-Awards/static/js/453.23263ec9.chunk.js",
     "static/media/gallery_27.jpg": "/Global-Marketing-Awards/static/media/gallery_27.c4ca8829b9f6f08c7ddd.jpg",
     "static/media/gallery_26.jpg": "/Global-Marketing-Awards/static/media/gallery_26.5f13960a1fe3d50cd63d.jpg",
@@ -31,6 +31,7 @@
     "static/media/gallery_21.jpg": "/Global-Marketing-Awards/static/media/gallery_21.d93c6e01091ab9bf07a4.jpg",
     "static/media/gallery_22.jpg": "/Global-Marketing-Awards/static/media/gallery_22.fbb92d9b2837b6f8cffc.jpg",
     "static/media/jury_25.jpg": "/Global-Marketing-Awards/static/media/jury_25.eac6bfe9d3fde853de7e.jpg",
+    "static/media/award.png": "/Global-Marketing-Awards/static/media/award.a8e8f1ff38eab099ab0a.png",
     "static/media/jury_26.png": "/Global-Marketing-Awards/static/media/jury_26.386036a9f87475d5c73e.png",
     "static/media/jury_7.jpg": "/Global-Marketing-Awards/static/media/jury_7.d929c53bda83a34434f7.jpg",
     "static/media/jury_8.png": "/Global-Marketing-Awards/static/media/jury_8.51ce7255bb485a1948e0.png",
@@ -38,7 +39,6 @@
     "static/media/jury_1.jpg": "/Global-Marketing-Awards/static/media/jury_1.2f782595ebf6bcc49de9.jpg",
     "static/media/left-image.jpg": "/Global-Marketing-Awards/static/media/left-image.17e8baa5029cdd9828c1.jpg",
     "static/media/jury_18.jpg": "/Global-Marketing-Awards/static/media/jury_18.cb6d0fa963d1ac0b833a.jpg",
-    "static/media/statuettes.png": "/Global-Marketing-Awards/static/media/statuettes.56cadeedd03f939a5f30.png",
     "static/media/jury_9.png": "/Global-Marketing-Awards/static/media/jury_9.db8953dd3f24e7ff0c02.png",
     "static/media/jury_6.png": "/Global-Marketing-Awards/static/media/jury_6.3f5267775453c4990534.png",
     "static/media/jury_2.jpg": "/Global-Marketing-Awards/static/media/jury_2.4c662f9c5cf204534647.jpg",
@@ -77,12 +77,12 @@
     "static/media/sponsor4.webp": "/Global-Marketing-Awards/static/media/sponsor4.3a104ae7ee89c94c8c8d.webp",
     "index.html": "/Global-Marketing-Awards/index.html",
     "static/media/right-chevron_9144319.svg": "/Global-Marketing-Awards/static/media/right-chevron_9144319.6e2c7d80905d8de98120279cfd8d8694.svg",
-    "main.27546563.css.map": "/Global-Marketing-Awards/static/css/main.27546563.css.map",
-    "main.15ab3967.js.map": "/Global-Marketing-Awards/static/js/main.15ab3967.js.map",
+    "main.fb52bf09.css.map": "/Global-Marketing-Awards/static/css/main.fb52bf09.css.map",
+    "main.c9cbafb8.js.map": "/Global-Marketing-Awards/static/js/main.c9cbafb8.js.map",
     "453.23263ec9.chunk.js.map": "/Global-Marketing-Awards/static/js/453.23263ec9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.27546563.css",
-    "static/js/main.15ab3967.js"
+    "static/css/main.fb52bf09.css",
+    "static/js/main.c9cbafb8.js"
   ]
 }
