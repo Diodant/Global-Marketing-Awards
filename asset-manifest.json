@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Global-Marketing-Awards/static/css/main.fb52bf09.css",
-    "main.js": "/Global-Marketing-Awards/static/js/main.c9cbafb8.js",
+    "main.css": "/Global-Marketing-Awards/static/css/main.9c8008a1.css",
+    "main.js": "/Global-Marketing-Awards/static/js/main.1a2ccdd1.js",
     "static/js/453.23263ec9.chunk.js": "/Global-Marketing-Awards/static/js/453.23263ec9.chunk.js",
     "static/media/gallery_27.jpg": "/Global-Marketing-Awards/static/media/gallery_27.c4ca8829b9f6f08c7ddd.jpg",
     "static/media/gallery_26.jpg": "/Global-Marketing-Awards/static/media/gallery_26.5f13960a1fe3d50cd63d.jpg",
@@ -77,12 +77,12 @@
     "static/media/sponsor4.webp": "/Global-Marketing-Awards/static/media/sponsor4.3a104ae7ee89c94c8c8d.webp",
     "index.html": "/Global-Marketing-Awards/index.html",
     "static/media/right-chevron_9144319.svg": "/Global-Marketing-Awards/static/media/right-chevron_9144319.6e2c7d80905d8de98120279cfd8d8694.svg",
-    "main.fb52bf09.css.map": "/Global-Marketing-Awards/static/css/main.fb52bf09.css.map",
-    "main.c9cbafb8.js.map": "/Global-Marketing-Awards/static/js/main.c9cbafb8.js.map",
+    "main.9c8008a1.css.map": "/Global-Marketing-Awards/static/css/main.9c8008a1.css.map",
+    "main.1a2ccdd1.js.map": "/Global-Marketing-Awards/static/js/main.1a2ccdd1.js.map",
     "453.23263ec9.chunk.js.map": "/Global-Marketing-Awards/static/js/453.23263ec9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.fb52bf09.css",
-    "static/js/main.c9cbafb8.js"
+    "static/css/main.9c8008a1.css",
+    "static/js/main.1a2ccdd1.js"
   ]
 }
