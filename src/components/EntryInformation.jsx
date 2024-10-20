@@ -162,17 +162,16 @@ const EntryInformation = () => {
 
   return (
     <div className="entry-info-container">
-      {/* Header Section with Logo and Text */}
+
       <div className="entry-header">
         <div className="entry-logo">
           <img src={logoImage} alt="Global Marketing Awards Logo" />
         </div>
-        <h1 className="entry-title">ENTRY INFORMATION</h1>
-        <p className="entry-subtitle">All you need to know to enter the Global Marketing Awards.</p>
+        <h1 className="entry-title">ИНФОРМАЦИЯ ДЛЯ УЧАСТНИКОВ</h1>
+        <p className="entry-subtitle">Всё, что вам нужно знать для участия в Global Marketing Awards.</p>
       </div>
 
       <div className="entry-content">
-        {/* Sidebar for Category Navigation */}
         <div className="category-menu">
           <ul>
             <li className={activeTab === 'criteria' ? 'active' : ''} onClick={() => setActiveTab('criteria')}>
@@ -187,7 +186,6 @@ const EntryInformation = () => {
           </ul>
         </div>
 
-        {/* Content Area */}
         <div className="content-area">{content[activeTab]}</div>
       </div>
     </div>

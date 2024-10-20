@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
 
 const winnersData = [
     {
@@ -215,15 +214,6 @@ const winnersData = [
   ];
   
 
-const mapStyles = {
-  height: "500px",
-  width: "100%",
-};
-
-const defaultCenter = {
-  lat: 20,
-  lng: 0,
-};
 
 const WinnersPage = () => {
   const [selectedYear, setSelectedYear] = useState(2019);
@@ -231,23 +221,13 @@ const WinnersPage = () => {
 
   return (
     <div className="winners-page-container">
-      <div className="map-container">
-        <LoadScript googleMapsApiKey="YOUR_VALID_GOOGLE_MAPS_API_KEY">
-          <GoogleMap
-            mapContainerStyle={mapStyles}
-            zoom={3}
-            center={defaultCenter}
-          >
-            {selectedYearData &&
-              selectedYearData.items.map((item, index) => (
-                <Marker
-                  key={index}
-                  position={{ lat: 50, lng: 30 }}
-                  title={item.name}
-                />
-              ))}
-          </GoogleMap>
-        </LoadScript>
+
+
+      <div className="winners-hero-section">
+        <div className="overlay"></div>
+        <div className="hero-text">
+          <h1>Победители Global Marketing Awards</h1>
+        </div>
       </div>
 
       <div className="winners-section">
@@ -261,7 +241,7 @@ const WinnersPage = () => {
 
         {selectedYearData && (
           <div className="winners-list">
-            <h2 className='winners-title'>Winners of {selectedYear}</h2>
+            <h2 className='winners-title'>Победители {selectedYear}</h2>
             {selectedYearData.items.map((item, index) => (
               <div key={index} className="winner-item">
                 <div className='winners-category'>{item.category}</div>

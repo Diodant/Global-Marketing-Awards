@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import sponsor1 from '../img/sponsors/sponsor1.webp'; 
 import sponsor2 from '../img/sponsors/sponsor2.webp';
 import sponsor3 from '../img/sponsors/sponsor3.webp';
@@ -6,22 +7,22 @@ import sponsor4 from '../img/sponsors/sponsor4.webp';
 import sponsor5 from '../img/sponsors/sponsor5.webp';
 import sponsor6 from '../img/sponsors/sponsor6.webp';
 import backgroundImg from '../img/BG_01-web.jpg'; 
-import awardImage from '../img/statuettes.png';
+import awardImage from '../img/award.png';
 import logoImage from '../img/logo.png';
 import EntryInformation from './EntryInformation'
 
 const testimonials = [
     {
-      text: "The prestige of earning a MarCom award is the final culmination of a tremendous amount of effort for our clients and us. It validates the quality of our work and provides our clients with icing on the cake of a project well executed.",
-      author: "TONY ROTUNDO PACIFIC TECHNOLOGY SOLUTIONS, IRVINE, CA"
+      text: "Global Marketing Awards — это уникальная площадка для признания лучших в маркетинге. Каждый год она поднимает стандарты и вдохновляет на новые достижения.",
+      author: "Сергей Рожков, директор по Маркетингу."
     },
     {
-      text: "Winning a Global Marketing Award helped our agency gain the visibility and trust we needed in the industry.",
-      author: "JANE DOE MARKETING DIRECTOR, LONDON, UK"
+      text: "Эта премия демонстрирует силу инноваций и креативных подходов, которые меняют индустрию. Для меня честь быть её частью.",
+      author: "Анна Петрова, эксперт по стратегическому маркетингу."
     },
     {
-      text: "This recognition pushed our creativity further, leading to an even more significant impact on our clients' businesses.",
-      author: "JOHN SMITH CREATIVE DIRECTOR, NY, USA"
+      text: "Global Marketing Awards — это знак качества и международного признания для каждого маркетолога, стремящегося быть в авангарде современных тенденций.",
+      author: "Дмитрий Васильев, руководитель рекламного агентсва."
     }
   ];
 
@@ -41,8 +42,8 @@ const Main = () => {
                     <img src={logoImage} alt="Logo" />
                 </div>
                     <h1>Global Marketing Awards</h1>
-                    <p>2024 Global Marketing Awards Now Open! | Deadline Sept. 12</p>
-                    <button className="enter-button">Enter Now!</button>
+                    <p>2024 Global Marketing Awards | Открыта с 10 по 20 апреля</p>
+                    <Link to="/form" className="enter-button">Подать заявку!</Link>
                 </div>
             </div>
             <div className="award-description">
@@ -68,8 +69,8 @@ const Main = () => {
             <div className="cta-section" style={{ backgroundImage: `url(${backgroundImg})` }}>
                 <h2>Международная премия Global Marketing Awards</h2>
                 <div className="cta-buttons">
-                    <button className="cta-button">ENTER NOW</button>
-                    <button className="cta-button">SEE 2023 WINNERS!</button>
+                    <Link to="/form" className="cta-button">Подать заявку</Link>
+                    <Link to="/winners" className="cta-button">Смотри победителей</Link> 
                 </div>
             </div>
             <div className="about-statuette-section">
@@ -79,7 +80,7 @@ const Main = () => {
                             <i className="fa fa-trophy"></i>
                         </span>
                     </div>
-                    <h3>ABOUT GLOBAL MARKETING AWARDS</h3>
+                    <h3>О ПРЕМИИ GLOBAL MARKETING AWARDS</h3>
                     <p>
                     С момента своего основания, Global Marketing Awards стала платформой для обмена опытом и идеями среди ведущих маркетологов СНГ. Ежегодно премия привлекает внимание тысяч специалистов и лидеров отрасли, предоставляя им возможность заявить о себе на международной арене. Премия подчеркивает значимость маркетинга в развитии бизнеса и укреплении брендов, демонстрируя лучшие практики и новаторские подходы.
                     </p>
@@ -93,9 +94,9 @@ const Main = () => {
                             <i className="fa fa-trophy"></i>
                         </span>
                     </div>
-                    <h3>THE STATUETTE</h3>
+                    <h3>ТРОФЕЙ</h3>
                     <p>
-                    Трофей премии Global Marketing Awards представляет собой символ превосходства в сфере маркетинга и креативности. Выполненный из высококачественного прозрачного акрила с контрастной красной основой, трофей визуально напоминает восхождение на вершину успеха. Верхняя часть украшена музыкальными нотами, символизирующими гармонию и ритм маркетинговой кампании, а центральная надпись включает название премии и имя лауреата. Этот трофей служит признанием за значительный вклад в индустрию маркетинга, олицетворяя труд, инновации и креативные достижения победителей.
+                    Трофей Global Marketing Awards стал культовым символом превосходства в области маркетинга. Разработанный для того, чтобы олицетворять вершину достижений, этот специально созданный приз является настоящим свидетельством креативности и инноваций. Элегантный, современный дизайн с эффектной звездой наверху признан ведущими маркетинговыми профессионалами по всему миру. Каждый трофей тщательно изготовлен, символизируя заслуженный успех своих обладателей. Награда Global Marketing Awards стоит в одном ряду с самыми престижными наградами в индустрии, отмечая выдающиеся заслуги в маркетинге на международном уровне.
                     </p>
                 </div>
                 </div>
@@ -108,17 +109,18 @@ const Main = () => {
                                 <i className="fa fa-thumbs-up"></i>
                             </span>
                         </div>
-                        <h3>WHY GLOBAL MARKETING AWARDS?</h3>
+                        <h3>Почему выбирают Global Marketing Awards?</h3>
                         <p>
-                            Global Marketing Awards is the choice of top marketing professionals globally. Thousands of creative firms and agencies participate to receive international recognition.
+                        Global Marketing Awards – это престижная международная премия, которая признает и отмечает выдающиеся достижения в маркетинге среди стран СНГ.
                         </p>
                         <p>
-                            Entry fees are affordable, and the judging process is fair and conducted by a team of full-time professionals. Results are timely, and every entrant gets their chance to shine.
+                        Уникальность премии заключается в строгом отборе участников и международном статусе, что обеспечивает высокие стандарты и признание на международной арене. 
                         </p>
                         <p>
-                            Our awards also feature the most comprehensive winner listing in the industry, with dedicated profile pages for each entry that is searchable by location and category.
+                        Участвуя в Global Marketing Awards, профессионалы получают возможность продемонстрировать свои инновации и достижения, а также обменяться опытом с лидерами индустрии, что помогает им укрепить свои позиции и развивать бизнес на международном уровне.
                         </p>
-                        <button className="see-winners-button">SEE WINNERS GALLERY</button>
+
+                        <Link to="/winners" className="see-winners-button">Смотри лист победителей</Link>
                     </div>
                 </div>
                 <div className="why-left-image">
@@ -128,14 +130,12 @@ const Main = () => {
                 
             </div>
             <EntryInformation />
-                  {/* Testimonial Section */}
       <div className="testimonial-section">
         <div className="testimonial-content">
           <p className="testimonial-text">“ {testimonials[activeTestimonial].text} ”</p>
           <p className="testimonial-author">— {testimonials[activeTestimonial].author}</p>
         </div>
 
-        {/* Dots for navigating through testimonials */}
         <div className="testimonial-dots">
           {testimonials.map((_, index) => (
             <span
