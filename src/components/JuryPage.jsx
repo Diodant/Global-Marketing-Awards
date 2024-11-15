@@ -25,7 +25,7 @@ import Juru_23 from '../img/jury/jury_23.jpg'
 import Juru_24 from '../img/jury/jury_24.jpeg'
 import Juru_25 from '../img/jury/jury_25.jpg'
 import Juru_26 from '../img/jury/jury_29.jpg'
-import Juru_27 from '../img/jury/jury_28.jpg'
+import Juru_27 from '../img/jury/jury_28.jpeg'
 import Juru_28 from '../img/jury/jury_27.jpg'
 import Juru_29 from '../img/jury/jury_26.png'
 import Juru_30 from '../img/jury/jury_30.jpg'
@@ -62,10 +62,10 @@ const juryMembers = [
   { year: 2023, name: "Светлана Литвиненко", country: "Украина", title: "Специалист по социальным проектам в маркетинге", imgSrc: Juru_24 },
   { year: 2023, name: "Азат Касымов", country: "Узбекистан", title: "Руководитель маркетинговых программ", imgSrc: Juru_25 },
   
-  { year: 2024, name: "Ирина Васильева", country: "Россия", title: "Руководитель отдела маркетинга в крупной телекоммуникационной компании", imgSrc: Juru_26 },
-  { year: 2024, name: "Михаил Ковалев", country: "Беларусь", title: "Эксперт по маркетинговым стратегиям в IT-секторе", imgSrc: Juru_27 },
-  { year: 2024, name: "Айжан Тулебаева", country: "Казахстан", title: "Специалист по брендингу и продвижению на международных рынках", imgSrc: Juru_28 },
-  { year: 2024, name: "Алексей Мельников", country: "Украина", title: "Руководитель отдела digital-маркетинга в ведущем e-commerce проекте", imgSrc: Juru_29 },
+  { year: 2024, name: "Оксана Кириллова", country: "Россия", title: "Эксперт по международному стратегическому маркетингу", imgSrc: Juru_27 },
+  { year: 2024, name: "Михаил Ковалев", country: "Беларусь", title: "Эксперт по маркетинговым стратегиям в IT-секторе", imgSrc: Juru_26 },
+  { year: 2024, name: "Айжан Тулебаева", country: "Казахстан", title: "Специалист по брендингу и продвижению на международных рынках", imgSrc: Juru_29 },
+  { year: 2024, name: "Алексей Мельников", country: "Украина", title: "Руководитель отдела digital-маркетинга в ведущем e-commerce проекте", imgSrc: Juru_28 },
   { year: 2024, name: "Гульмира Абдрахманова", country: "Узбекистан", title: "Эксперт по социальным и благотворительным маркетинговым кампаниям", imgSrc: Juru_30 },
 ];
 
