@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from 'react';
 import Juru_1 from '../img/jury/jury_1.jpg'
 import Juru_2 from '../img/jury/jury_2.jpg'
 import Juru_3 from '../img/jury/jury_3.png'
@@ -44,8 +44,8 @@ const juryMembers = [
   { year: 2020, name: "Виктория Левченко", country: "Украина", title: "Специалист по контент-маркетингу", imgSrc: Juru_9 },
   { year: 2020, name: "Наталья Гаврилова", country: "Киргизия", title: "Директор по маркетингу в сфере услуг", imgSrc: Juru_10 },
   
-  { year: 2021, name: "Сергей Волков", country: "Россия", title: "Руководитель маркетингового отдела в IT-компании", imgSrc: Juru_11 },
-  { year: 2021, name: "Алия Ибраимова", country: "Казахстан", title: "Специалист по бренд-стратегиям", imgSrc: Juru_12 },
+  { year: 2021, name: "Игорь Луковский", country: "Беларусь", title: 'Директор по маркетингу ООО "Mega Research"', imgSrc: Juru_19 },
+  { year: 2021, name: "Анна Алексеева", country: "Украина", title: "Директор по маркетингу ООО «DEMIS GROUP»", imgSrc: Juru_20 },
   { year: 2021, name: "Алексей Васильев", country: "Беларусь", title: "Эксперт по цифровым коммуникациям", imgSrc: Juru_13 },
   { year: 2021, name: "Дарья Павлова", country: "Украина", title: "Специалист по маркетинговой аналитике", imgSrc: Juru_14 },
   { year: 2021, name: "Тимур Исаев", country: "Узбекистан", title: "Руководитель отдела маркетинга в технологической компании", imgSrc: Juru_15 },
@@ -53,8 +53,8 @@ const juryMembers = [
   { year: 2022, name: "Партизпанян Айк", country: "Армения", title: "Директор по маркетингу Publicis Armenia", imgSrc: Juru_16 },
   { year: 2022, name: "Александр Смирнов", country: "Россия", title: "Эксперт в области маркетинговых технологий", imgSrc: Juru_17 },
   { year: 2022, name: "Мария Ким", country: "Казахстан", title: "Руководитель отдела маркетинга в крупной розничной сети", imgSrc: Juru_18 },
-  { year: 2022, name: "Игорь Луковский", country: "Беларусь", title: "Директор по маркетингу", imgSrc: Juru_19 },
-  { year: 2022, name: "Алексеева Анна", country: "Украина", title: "Директор по маркетингу", imgSrc: Juru_20 },
+  { year: 2022, name: "Сергей Волков", country: "Россия", title: "Руководитель маркетингового отдела в IT-компании", imgSrc: Juru_11 },
+  { year: 2022, name: "Алия Ибраимова", country: "Казахстан", title: "Специалист по бренд-стратегиям", imgSrc: Juru_12 },
   
   { year: 2023, name: "Андрей Сергеев", country: "Россия", title: "Эксперт по маркетинговым стратегиям", imgSrc: Juru_21 },
   { year: 2023, name: "Елена Новикова", country: "Беларусь", title: "Специалист по маркетинговым исследованиям", imgSrc: Juru_22 },
@@ -70,6 +70,30 @@ const juryMembers = [
 ];
 
 const JuryPage = () => {
+
+  useEffect(() => {
+    const replaceName = () => {
+      const elements = document.querySelectorAll('[data-translate-custom="true"]');
+      elements.forEach((el) => {
+        if (document.documentElement.lang !== 'ru') {
+          if (el.textContent === "Анна Алексеева") {
+            el.textContent = "Hanna Alieksieieva";
+          } else if (el.textContent === "Игорь Луковский") {
+            el.textContent = "Ihar Lukouski";
+          }
+        }
+      });
+    };
+  
+    const observer = new MutationObserver(() => {
+      replaceName();
+    });
+  
+    observer.observe(document.body, { childList: true, subtree: true });
+  
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <>
       <div className="hero-section">
@@ -169,7 +193,15 @@ const JuryPage = () => {
                       alt={member.name}
                       className="jury-image"
                     />
-                    <h2>{member.name}</h2>
+                    <h2
+                      data-translate-custom={
+                        ["Анна Алексеева", "Игорь Луковский"].includes(member.name)
+                          ? "true"
+                          : "false"
+                      }
+                    >
+                      {member.name}
+                    </h2>
                     <p>{member.country}</p>
                     <p>{member.title}</p>
                   </div>

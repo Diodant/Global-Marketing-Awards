@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const winnersData = [
     {
@@ -76,9 +76,9 @@ const winnersData = [
       items: [
         {
           category: 'Маркетолог Года',
-          name: 'Оксана Кириллова',
-          country: 'Россия',
-          text1: 'За разработку и успешное внедрение  маркетинговой стратегии инновационного социально полезного цифрового продукта.',
+          name: 'Елена Гласенко',
+          country: 'УКРАИНА',
+          text1: 'За разработку уникальной digital-кампании, которая привлекла рекордное количество новых клиентов и увеличила онлайн-продажи на 50%.',
         },
         {
           category: 'Лучший Digital-Маркетинг Проект',
@@ -216,6 +216,29 @@ const winnersData = [
 
 
 const WinnersPage = () => {
+
+  useEffect(() => {
+    const replaceName = () => {
+      const elements = document.querySelectorAll('[data-translate-custom="true"]');
+      elements.forEach((el) => {
+        if (el.textContent.trim() === "Елена Гласенко") {
+          el.textContent = "Olena Glasenko";
+        } 
+      });
+    };
+    
+    // Первый вызов сразу
+    replaceName();
+  
+    const observer = new MutationObserver(() => {
+      replaceName();
+    });
+  
+    observer.observe(document.body, { childList: true, subtree: true });
+  
+    return () => observer.disconnect();
+  }, []);
+
   const [selectedYear, setSelectedYear] = useState(2019);
   const selectedYearData = winnersData.find((data) => data.year === selectedYear);
 
@@ -245,7 +268,15 @@ const WinnersPage = () => {
             {selectedYearData.items.map((item, index) => (
               <div key={index} className="winner-item">
                 <div className='winners-category'>{item.category}</div>
-                <h3>{item.name}</h3>
+                <h3
+                      data-translate-custom={
+                        ["Елена Гласенко"].includes(item.name)
+                          ? "true"
+                          : "false"
+                      }
+                    >
+                      {item.name}
+                    </h3>
                 <div className='winners-country'>{item.country}</div>
                 <p>{item.text1}</p>
               </div>
