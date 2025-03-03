@@ -8,7 +8,7 @@ import Juru_6 from '../img/jury/jury_6.png'
 import Juru_7 from '../img/jury/jury_7.jpg'
 import Juru_8 from '../img/jury/jury_8.png'
 import Juru_9 from '../img/jury/jury_9.png'
-import Juru_10 from '../img/jury/jury_10.jpeg'
+import Juru_10 from '../img/jury/jury_10.jpg'
 import Juru_11 from '../img/jury/jury_11.jpeg'
 import Juru_12 from '../img/jury/jury_12.jpg'
 import Juru_13 from '../img/jury/jury_13.jpeg'
@@ -42,7 +42,7 @@ const juryMembers = [
   { year: 2020, name: "Ольга Киреева", country: "Беларусь", title: "Эксперт по брендингу", imgSrc: Juru_7 },
   { year: 2020, name: "Азамат Жумабеков", country: "Казахстан", title: "Руководитель отдела цифрового маркетинга", imgSrc: Juru_8 },
   { year: 2020, name: "Виктория Левченко", country: "Украина", title: "Специалист по контент-маркетингу", imgSrc: Juru_9 },
-  { year: 2020, name: "Наталья Гаврилова", country: "Киргизия", title: "Директор по маркетингу в сфере услуг", imgSrc: Juru_10 },
+  { year: 2020, name: "Наргиз Аманбекова", country: "Казахстан", title: "Директор по маркетинговым коммуникациям GForce Grey", imgSrc: Juru_10 },
   
   { year: 2021, name: "Игорь Луковский", country: "Беларусь", title: 'Директор по маркетингу ООО "Mega Research"', imgSrc: Juru_19 },
   { year: 2021, name: "Анна Алексеева", country: "Украина", title: "Директор по маркетингу ООО «DEMIS GROUP»", imgSrc: Juru_20 },
