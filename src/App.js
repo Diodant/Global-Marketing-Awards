@@ -1,5 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
+
 import Navigation from './components/Navigation';
 import Main from './components/Main';
 import WinnersPage from './components/WinnersPage';
@@ -14,22 +16,24 @@ import './App.css';
 
 function App() {
   return (
-    <Router>
-      <div className="App">
-        <Navigation />
-        <Routes>
-          <Route path="/" element={<Main />} />
-          <Route path="/winners" element={<WinnersPage />} />
-          <Route path="/judges" element={<JuryPage />} />
-          <Route path="/gallery" element={<GalleryPage />} />
-          <Route path="/form" element={<ApplicationForm />} />
-          <Route path="/contacts" element={<ContactPage />} />
-          <Route path="/articles" element={<ArticlesList />} />
-          <Route path="/articles/:id" element={<Article />} />
-        </Routes>
-        <Footer  />
-      </div>
-    </Router>
+    <HelmetProvider>
+      <Router>
+        <div className="App">
+          <Navigation />
+          <Routes>
+            <Route path="/" element={<Main />} />
+            <Route path="/winners" element={<WinnersPage />} />
+            <Route path="/judges" element={<JuryPage />} />
+            <Route path="/gallery" element={<GalleryPage />} />
+            <Route path="/form" element={<ApplicationForm />} />
+            <Route path="/contacts" element={<ContactPage />} />
+            <Route path="/articles" element={<ArticlesList />} />
+            <Route path="/articles/:id" element={<Article />} />
+          </Routes>
+          <Footer />
+        </div>
+      </Router>
+    </HelmetProvider>
   );
 }
 

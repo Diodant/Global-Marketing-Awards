@@ -1204,11 +1204,11 @@ a:focus {
 }
 
 .article-image {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  margin-bottom: 20px;
-  border-radius: 5px;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border-radius: 5px;
 }
 
 .article-info {
@@ -1412,4 +1412,12 @@ input {
 
 .footer-back-to-top:hover {
   background-color: rgb(152, 208, 16);
+}
+
+.seo-hidden {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }
