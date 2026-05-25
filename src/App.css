@@ -978,6 +978,16 @@ a:focus {
   padding: 50px 0px;
 }
 
+.jury_h3 {
+      font-size: 25px;
+    color: #2c4326;
+    line-height: 1.5em;
+    font-weight: 600;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
 .jury-cont h3 {
   font-size: 35px;
   color: #2c4326;

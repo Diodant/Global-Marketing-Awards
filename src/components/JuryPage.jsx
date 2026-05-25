@@ -34,7 +34,12 @@ import Juru_31 from '../img/jury/jury_31.png'
 import Juru_32 from '../img/jury/jury_32.jpg'
 import Juru_33 from '../img/jury/jury_33.jpg'
 import Juru_34 from '../img/jury/jury_34.jpeg'
-import Juru_35 from '../img/jury/jury_35.jpg'
+import Juru_35 from '../img/jury/jury_36.jpg'
+import Juru_36 from '../img/jury/jury_36.jfif'
+import Juru_37 from '../img/jury/jury_37.webp'
+import Juru_38 from '../img/jury/jury_38.jpg'
+import Juru_39 from '../img/jury/jury_39.jpg'
+import Juru_40 from '../img/jury/jury_40.jfif'
 
 const juryMembers = [
   { year: 2019, name: "Иван Козлов", country: "Россия", title: "Руководитель отдела маркетинга крупной IT-компании", imgSrc: Juru_1 },
@@ -77,29 +82,41 @@ const juryMembers = [
   { year: 2025, name: "Кристина Лупу", country: "Молдова", title: "Стратег по маркетингу и развитию брендов. Разрабатывает позиционирование, коммуникационные платформы и go-to-market стратегии для компаний в конкурентных категориях.", imgSrc: Juru_32 },
   { year: 2025, name: "Темирлан Беков", country: "Казахстан", title: "Эксперт по цифровому маркетингу. Фокус: performance-стратегии, оптимизация ROAS/CPA, автоматизация закупки и управление кросс-канальными кампаниями.", imgSrc: Juru_33 },
   { year: 2025, name: "Вероника Степаненко", country: "Беларусь", title: "Директор по маркетингу в ритейле. Опыт в развитии CRM и лояльности, retail media, мерчандайзинге и интеграции онлайн- и офлайн-каналов.", imgSrc: Juru_34 },
-  { year: 2025, name: "Алёна Маркевич", country: "Россия", title: "Руководитель маркетинга в FMCG. Специализация: запуск брендов, трейд-маркетинг, исследования потребителей, развитие дистрибуции и рост узнаваемости.", imgSrc: Juru_35 },
+  { year: 2025, name: "Екатерина Кухилава", country: "Россия", title: "Международный эксперт в области MarTech, интеллектуальной персонализации и real-time адаптации цифровых коммуникаций. Специализируется на создании высокоточных систем взаимодействия с аудиторией. Автор профессиональных публикаций и правообладатель патентного решения в сфере маркетинговых технологий.", imgSrc: Juru_35 },
+
+  { year: 2026, name: "Анвар Агаев", country: "Азербайджан", title: "Эксперт по стратегическому маркетингу и развитию брендов. Специализируется на построении коммуникационных платформ, brandformance-подходах и управлении эффективностью маркетинговых инвестиций в международных проектах.", imgSrc: Juru_36 },
+  { year: 2026, name: "Данияр Алимбаев", country: "Казахстан", title: "Руководитель направления digital и performance-маркетинга. Фокус: омниканальные стратегии, оптимизация CPA/ROAS, автоматизация закупки трафика и внедрение data-driven моделей принятия решений.", imgSrc: Juru_37 },
+  { year: 2026, name: "Илья Макаров", country: "Россия", title: "Директор по продуктовому маркетингу в крупной IT-компании. Специализируется на B2B-growth, запуске SaaS-продуктов и построении воронок с опорой на аналитику, LTV/CAC и unit-экономику.", imgSrc: Juru_38 },
+  { year: 2026, name: "Кристина Лупу", country: "Молдова", title: "Стратег по маркетингу и развитию брендов. Разрабатывает позиционирование, коммуникационные платформы и go-to-market стратегии для компаний в конкурентных категориях.", imgSrc: Juru_39 },
+  { year: 2026, name: "Темирлан Беков", country: "Казахстан", title: "Эксперт по цифровому маркетингу. Фокус: performance-стратегии, оптимизация ROAS/CPA, автоматизация закупки и управление кросс-канальными кампаниями.", imgSrc: Juru_40 },
 ];
 
 const JuryPage = () => {
 
 useEffect(() => {
-  const rules = [
-    // ✅ Анна Алексеева (RU → правильное EN)
-    { re: /Анна\s+Алексеева/g, to: "Hanna Alieksieieva" },
-    { re: /Анны\s+Алексеевой/g, to: "Hanna Alieksieieva" },
+const rules = [
+  // ✅ Анна Алексеева
+  { re: /Анна\s+Алексеева/g, to: "Hanna Alieksieieva" },
+  { re: /Анны\s+Алексеевой/g, to: "Hanna Alieksieieva" },
+  { re: /\bAnna\s+Alekseeva\b/g, to: "Hanna Alieksieieva" },
+  { re: /\bAlekseeva\s+Anna\b/g, to: "Hanna Alieksieieva" },
+  { re: /\bHanna\s+Alieksieva\b/g, to: "Hanna Alieksieieva" },
 
-    // ✅ варианты, которые может наделать переводчик
-    { re: /\bAnna\s+Alekseeva\b/g, to: "Hanna Alieksieieva" },
-    { re: /\bAlekseeva\s+Anna\b/g, to: "Hanna Alieksieieva" },
+  // ✅ Екатерина Кухилава
+  { re: /Екатерина\s+Кухилава/g, to: "Ekaterina Kukhilava" },
+  { re: /Екатерины\s+Кухилавой/g, to: "Ekaterina Kukhilava" },
+  { re: /Екатерине\s+Кухилавой/g, to: "Ekaterina Kukhilava" },
+  { re: /Екатерину\s+Кухилаву/g, to: "Ekaterina Kukhilava" },
+  { re: /\bEkaterina\s+Kuhilava\b/g, to: "Ekaterina Kukhilava" },
+  { re: /\bKuhilava\s+Ekaterina\b/g, to: "Ekaterina Kukhilava" },
+  { re: /\bKukhilava\s+Ekaterina\b/g, to: "Ekaterina Kukhilava" },
+  { re: /\bCatherine\s+Kuhilava\b/g, to: "Ekaterina Kukhilava" },
+  { re: /\bCatherine\s+Kukhilava\b/g, to: "Ekaterina Kukhilava" },
 
-    // ✅ самое важное: чинит “Hanna Alieksieva” → “Hanna Alieksieieva”
-    { re: /\bHanna\s+Alieksieva\b/g, to: "Hanna Alieksieieva" },
-
-    // Игорь Луковский
-    { re: /Игорь\s+Луковский/g, to: "Ihar Lukouski" },
-    { re: /\bIgor\s+Lukovsky\b|\bIhar\s+Lukovsky\b|\bIgor\s+Lukouski\b/g, to: "Ihar Lukouski" }
-  ];
-
+  // ✅ Игорь Луковский
+  { re: /Игорь\s+Луковский/g, to: "Ihar Lukouski" },
+  { re: /\bIgor\s+Lukovsky\b|\bIhar\s+Lukovsky\b|\bIgor\s+Lukouski\b/g, to: "Ihar Lukouski" }
+];
   const normalize = (s) => s.replace(/\s+/g, " ").trim();
 
   function isBrowserTranslated() {
@@ -156,28 +173,29 @@ useEffect(() => {
 
   return (
     <>
-    <Helmet>
+ <Helmet>
   <title>
     Жюри Global Marketing Awards | Международные эксперты маркетинга
   </title>
 
   <meta
     name="description"
-    content="Жюри Global Marketing Awards — международные эксперты в области маркетинга, стратегий и digital. В составе жюри — Анна Алексеева (Hanna Alieksieieva) 2021 год и другие признанные специалисты."
+    content="Жюри Global Marketing Awards — международные эксперты в области маркетинга, стратегий и digital. В составе жюри — Анна Алексеева (Hanna Alieksieieva), Роман Шлыков (Roman Shlykov), Екатерина Кухилава (Ekaterina Kukhilava) и другие признанные специалисты."
   />
 
   <meta
     name="keywords"
-    content="жюри маркетинга, Global Marketing Awards, Анна Алексеева, Hanna Alieksieieva, эксперты маркетинга, digital marketing experts"
+    content="жюри маркетинга, Global Marketing Awards, Анна Алексеева, Hanna Alieksieieva, Роман Шлыков, Roman Shlykov, эксперты маркетинга, digital marketing experts"
   />
 
-  <link rel="canonical" href="https://globalmarketingaward.com/jury" />
+<link rel="canonical" href="https://globalmarketingaward.com/judges" />
+<meta property="og:url" content="https://globalmarketingaward.com/judges" />
 
   {/* Open Graph */}
   <meta property="og:title" content="Жюри Global Marketing Awards" />
   <meta
     property="og:description"
-    content="Международное жюри премии Global Marketing Awards, включая экспертов мирового уровня."
+    content="Жюри Global Marketing Awards — международные эксперты в области маркетинга, стратегий и digital. В составе жюри — Анна Алексеева (Hanna Alieksieieva), Роман Шлыков (Roman Shlykov), Екатерина Кухилава (Ekaterina Kukhilava) и другие признанные специалисты."
   />
   <meta property="og:type" content="website" />
 
@@ -194,6 +212,20 @@ useEffect(() => {
           "alternateName": "Анна Алексеева",
           "jobTitle": "Marketing Expert",
           "description": "Эксперт в области стратегического маркетинга и предиктивной аналитики"
+        },
+        {
+          "@type": "Person",
+          "name": "Roman Shlykov",
+          "alternateName": "Роман Шлыков",
+          "jobTitle": "Marketing Director",
+          "description": "SEO-гуру и директор по маркетингу, разработавший систему анализа ключевых слов, увеличившую конверсию сайтов на 80%"
+        },
+                {
+          "@type": "Person",
+          "name": "Ekaterina Kukhilava",
+          "alternateName": "Екатерина Кухилава",
+          "jobTitle": "Marketing Director",
+          "description": "Международный эксперт в области MarTech, интеллектуальной персонализации и real-time адаптации цифровых коммуникаций. Специализируется на создании высокоточных систем взаимодействия с аудиторией. Автор профессиональных публикаций и правообладатель патентного решения в сфере маркетинговых технологий."
         }
       ]
     })}
@@ -275,6 +307,7 @@ useEffect(() => {
 
       {/* Jury section */}
       <div className="jury-section">
+    <h3 className='jury_h3'>Жюри Global Marketing Awards — это международные эксперты в области маркетинга, digital и стратегий. В состав жюри входят специалисты из Украины, Казахстана, Беларуси и других стран, обладающие практическим опытом работы с крупными брендами и международными проектами.</h3>
         {juryMembers
           .reduce((years, member) => {
             const yearExists = years.find((y) => y.year === member.year);
@@ -297,11 +330,11 @@ useEffect(() => {
                       className="jury-image"
                     />
                     <h2
-                      data-translate-custom={
-                        ["Анна Алексеева", "Игорь Луковский"].includes(member.name)
-                          ? "true"
-                          : "false"
-                      }
+                    data-translate-custom={
+                      ["Анна Алексеева", "Игорь Луковский", "Екатерина Кухилава"].includes(member.name)
+                        ? "true"
+                        : "false"
+                    }
                     >
                       {member.name}
                     </h2>
